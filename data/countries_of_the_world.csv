@@ -1,4 +1,4 @@
-Country,Region,Population,Area(Km2),Coastline (coast/area ratio),Net migration,Infant mortality (per 1000 births),GDP ($ per capita),Birthrate,Deathrate,Agriculture,Industry,Service
+Country,Region,Population,Area,Coastline (coast/area ratio),Net migration,Infant mortality (per 1000 births),GDP ($ per capita),Birthrate,Deathrate,Agriculture,Industry,Service
 Afghanistan,ASIA (EX. NEAR EAST)         ,31056997,647500,"0,00","23,06","163,07",700,"46,6","20,34","0,38","0,24","0,38"
 Albania,EASTERN EUROPE                     ,3581655,28748,"1,26","-4,93","21,52",4500,"15,11","5,22","0,232","0,188","0,579"
 Algeria,NORTHERN AFRICA                    ,32930091,2381740,"0,04","-0,39",31,6000,"17,14","4,61","0,101","0,6","0,298"
