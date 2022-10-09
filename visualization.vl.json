@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Would demographic characteristic from 2017",
+  "title": "world density & demographic characteristic in 2017",
   "width": 800,
   "height": 400,
   "data": {
@@ -54,19 +54,19 @@
         "color": {
            "title": "Density(person/km2) in country",
            "field": "Density",
-          "type": "quantitative",
-          "scale": {
+            "type": "quantitative",
+            "scale": {
             "type": "log",
             "domain": [1, 5, 25, 125, 625],
             "range": ["#ffffb2", "#fecc5c", "#fd8d3c", "#e31a1c"]
           }
         },"tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"} ,
-          {"field": "Density", "type": "quantitative", "title": "Density"},
-          {"field": "Population", "type": "quantitative","title": "Population"},
+          {"field": "Density", "type": "quantitative", "title": "Density", "format": ".2f"},
+          {"field": "Population", "type": "quantitative","title": "Population", "format": ","},
           {"field": "Birthrate", "type": "quantitative", "format": ",","title": "Birth Rate"},
-          {"field": "Deathrate", "type": "quantitative", "format": ",","title": "Death Rate"},
-          {"field": "Area", "type": "quantitative", "format": ",","title": "Area(Km2)"}
+          {"field": "Deathrate", "type": "quantitative", "format": ",","title": "Death Rate"}
+
         ]
       } 
       
