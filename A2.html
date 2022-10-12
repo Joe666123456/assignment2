@@ -12,13 +12,13 @@
  
 </head>
 <body>
-<p>ahhaha</p>
 <div id="population_map"></div>
 
 <script type="text/javascript">
 
-  var spec2 = "visualization.vl.json";
-  vegaEmbed('#population_map', spec2).then(function(result) {
+  var spec1 = "v1.json";
+  var spec2 = "v2.json";
+  vegaEmbed('#population_map', spec1,spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
