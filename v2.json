@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height": 400,
-  "title": "Population per Country ",
   "data": {
     "url": "https://raw.githubusercontent.com/Joe666123456/assignment2/main/data/countries_of_the_world.csv"
   },
