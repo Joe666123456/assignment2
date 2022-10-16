@@ -1,0 +1,144 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background":"whitesmoke",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Joe666123456/assignment2/main/data/countries_of_the_world.csv"
+    },
+    "params": [
+      {
+        "name": "Population_Above",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 100000000,
+          "step": 1000000,
+          "name": "Minimum Population: "
+        }
+      },
+      {
+        "name": "Region_selection",
+        "bind": {
+          "input": "select",
+          "labels": [
+            "Show All",
+            "Latin America",
+            "Asia",
+            "Eastern Europe", 
+            "Western Europe",
+            "Sub-Saharan Africa",
+            "Northern Africa",
+            "Oceania",
+            "Indiana States",
+            "Near East",
+            "Baltics"
+          ],
+          "options":[
+            null,
+            "LATIN AMER. & CARIB",
+            "ASIA (EX. NEAR EAST)",
+            "EASTERN EUROPE", 
+            "WESTERN EUROPE",
+            "SUB-SAHARAN AFRICA",
+            "NORTHERN AFRICA",
+            "OCEANIA",
+            "C.W. OF IND. STATES",
+            "NEAR EAST",
+            "BALTICS"
+          ],
+          "name": "Region Selection: "
+        }
+      }
+    ],
+    "transform": [
+      {"filter": "datum.Population > Population_Above"},
+      {
+        "filter": "Region_selection == null || datum.Region == Region_selection"
+  }, {
+        "calculate": "datum.Population/datum.Area",
+        "as": "Density"
+      },{
+        "calculate": "datum.Birthrate-datum.Deathrate",
+        "as": "Natural growth rate"
+      }
+    ],
+    "encoding": {
+      "y": {
+        "field": "Natural growth rate",
+        "type": "quantitative",
+        "title": "Natural growth rate",
+        "axis": {"tickCount": 6},
+        "scale": {"domain": [-10, 40]}
+  }, "x": {
+        "field": "Density",
+        "type": "quantitative",
+        "title": "Density",
+        "axis": {"tickCount": 4},
+        "scale": {"type": "log", "domain": [1, 100000]}
+  } },
+  "layer": [ {
+        "mark": "circle",
+        "encoding": {
+          "size": {
+            "field": "Population",
+            "type": "quantitative",
+            "scale": {
+              "type": "threshold",
+              "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+              "range": [10, 50, 150, 200, 300, 400]
+            },
+            "legend": {"format": ".1s"}
+          },
+          "color": {
+            "field": "Region",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+            "LATIN AMER. & CARIB",
+            "ASIA (EX. NEAR EAST)",
+            "EASTERN EUROPE", 
+            "WESTERN EUROPE",
+            "SUB-SAHARAN AFRICA",
+            "NORTHERN AFRICA",
+            "OCEANIA",
+            "C.W. OF IND. STATES",
+            "NEAR EAST",
+            "BALTICS"], 
+  "range": [
+            "#e41a1c",
+            "#984ea3",
+            "#ff7f00",
+            "#a6cee3",
+            "#377eb8",
+            "#a65628",
+            "#fec44f",
+            "#2c7fb8",
+            "#bcbddc",
+            "#c994c7"
+  ] }
+      },
+      "opacity": { "value": 0.6}
+  } },
+  {
+  "mark": {
+      "type": "text",
+      "align": "right",
+      "baseline": "middle",
+      "dx": -12,
+      "fontSize": 11.5,
+      "fontStyle": "italic"
+    },
+    "encoding": {
+      "text": {"field": "Country", "type": "nominal"},
+      "color": {"value": "black"},
+      "opacity": {
+        "condition": {
+              "test": "datum['Country'] == 'China' || datum['Country'] == 'Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'Italy' || datum['Country'] == 'Yemen' ||  datum['Country'] == 'United States of America'", "value": 1 },
+  "value": 0 },
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "Birthrate", "title":"Birth rate", "type": "quantitative"},
+            {"field": "Deathrate",  "title":"Death rate","type": "quantitative"},
+            {"field": "Population","type": "quantitative", "format":","} ]
+  } }
+  ]  }

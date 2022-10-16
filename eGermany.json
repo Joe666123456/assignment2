@@ -1,0 +1,16 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Pie Chart with percentage_tooltip",
+    "data": {
+      "values": [
+        {"category": "Agriculture", "value":0.009},
+        {"category": "Industry", "value": 0.296},
+        {"category": "Service", "value": 0.695}
+      ]
+      },
+    "mark": {"type": "arc", "tooltip": true},
+    "encoding": {
+      "theta": {"field": "value", "title":"Proportion","type": "quantitative", "stack": "normalize"},
+      "color": {"field": "category", "title":"Economy type","type": "nominal"}
+    }
+  }
