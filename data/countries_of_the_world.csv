@@ -1,8 +1,8 @@
-Country,Region,Population,Area,Coastline (coast/area ratio),Net migration,Infant mortality (per 1000 births),GDP ($ per capita),Birthrate,Deathrate,Agriculture,Industry,Service
+Country,Region,Population,Area,Coastline (coast/area ratio),Net migration,Infant mortality (per 1000 births),GDP($/capita),Birthrate,Deathrate,Agriculture,Industry,Service
 Afghanistan,ASIA (EX. NEAR EAST),31056997,647500,"0,00","23,06","163,07",700,46.6,20.34,0.38,0.24,0.38
 Albania,EASTERN EUROPE,3581655,28748,"1,26","-4,93","21,52",4500,15.11,5.22,0.232,0.188,0.579
 Algeria,NORTHERN AFRICA,32930091,2381740,"0,04","-0,39",31,6000,17.14,4.61,0.101,0.6,0.298
-American Samoa,OCEANIA,57794,199,"58,29","-20,71","9,27",8000,22.46,3.27,,,
+American Samoa,OCEANIA,57794,199,"58,29",,"9,27",8000,22.46,3.27,,,
 Andorra,WESTERN EUROPE,71201,468,"0,00","6,6","4,05",19000,8.71,6.25,,,
 Angola,SUB-SAHARAN AFRICA,12127071,1246700,"0,13",0,"191,19",1900,45.11,24.2,0.096,0.658,0.246
 Anguilla,LATIN AMER. & CARIB,13477,102,"59,80","10,76","21,03",8600,14.17,5.34,0.04,0.18,0.78
