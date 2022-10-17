@@ -1,16 +1,26 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Pie Chart with percentage_tooltip",
-    "data": {
-      "values": [
-        {"category": "Agriculture", "value":0.01},
-        {"category": "Industry", "value":0.204},
-        {"category": "Service", "value": 0.787}
-      ]
-      },
-    "mark": {"type": "arc", "tooltip": true},
-    "encoding": {
-      "theta": {"field": "value", "title":"Proportion","type": "quantitative", "stack": "normalize"},
-      "color": {"field": "category", "title":"Economy type","type": "nominal", "legend": null}
-    }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Pie Chart with percentage_tooltip",
+  "data": {
+    "values": [
+      {"category": "Agriculture", "value":0.01},
+      {"category": "Industry", "value":0.204},
+      {"category": "Service", "value": 0.787}
+    ]
+    },
+  "mark": {"type": "arc", "tooltip": true},
+  "encoding": {
+    "theta": {"field": "value", "title":"Proportion","type": "quantitative", "stack": "normalize"},
+    "color": {"field": "category", "title":"Economy type","type": "nominal", "legend": null,
+        "scale": {
+          "domain": [
+        "Service",
+        "Agriculture",
+        "Industry"], 
+"range": [
+        "#fec44f",
+        "#2ca25f",
+        "#636363"] }
   }
+  }
+}

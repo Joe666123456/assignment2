@@ -1,69 +1,119 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Drag the sliders to highlight points.",
-    "data": {"url": "https://raw.githubusercontent.com/Joe666123456/assignment2/main/data/countries_of_the_world.csv"},
-    "layer": [{
-      "mark": "circle",
-      "encoding": {
-        "x": {"field": "Population", 
-              "type": "quantitative",
-              "axis": {"tickCount": 3},
-              "scale": {"type": "log", "domain": [100, 10000000000]}},
-        "y": {"field": "GDP ($ per capita)", 
-              "type": "quantitative", 
-              "axis": {"tickCount": 3},
-              "scale": {"type": "log", "domain": [100, 100000]}
-        },"color": {
-              "field": "Region",
-              "type": "nominal",
-              "scale": {
-                "domain": [
-              "LATIN AMER. & CARIB",
-              "ASIA (EX. NEAR EAST)",
-              "EASTERN EUROPE", 
-              "WESTERN EUROPE",
-              "SUB-SAHARAN AFRICA",
-              "NORTHERN AFRICA",
-              "OCEANIA",
-              "C.W. OF IND. STATES",
-              "NEAR EAST",
-              "BALTICS"], 
-    "range": [
-              "#e41a1c",
-              "#984ea3",
-              "#ff7f00",
-              "#a6cee3",
-              "#377eb8",
-              "#a65628",
-              "#fec44f",
-              "#2c7fb8",
-              "#bcbddc",
-              "#c994c7"
-    ] }
-        }
-      }
-    },{
-    "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "dx": -12,
-        "fontSize": 11.5,
-        "fontStyle": "italic"
-      },
-      "encoding": {
-        "text": {"field": "Country", "type": "nominal"},
-        "color": {"value": "black"},
-        "opacity": {
-          "condition": {
-                "test": "datum['Country'] == 'China'", "value": 1 },
-    "value": 0 },
-            "tooltip": [
-              {"field": "Country", "type": "nominal"},
-              {"field": "Agriculture", "title":"Agriculture rate", "type": "quantitative"},
-              {"field": "Industry", "title":"Industry rate","type": "quantitative"},
-              {"field": "Service","title":"Service rate","type": "quantitative"} ]
-    } }]
-    
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Drag the sliders to highlight points.",
+  "data": {"url": "https://raw.githubusercontent.com/Joe666123456/assignment2/main/data/countries_of_the_world.csv"},
+  "params": [{
+    "name": "GDP_Above",
+    "value": 0,
+    "bind": {
+      "input": "range",
+      "min": 0,
+      "max": 1000000000000,
+      "step": 1000000000,
+      "name": "Minimum GDP: "
+    }
+  },
+  {
+    "name": "Region_selection",
+    "bind": {
+      "input": "select",
+      "labels": [
+        "Show All",
+        "Latin America",
+        "Asia",
+        "Eastern Europe", 
+        "Western Europe",
+        "Sub-Saharan Africa",
+        "Northern Africa",
+        "Oceania",
+        "Indiana States",
+        "Near East",
+        "Baltics"
+      ],
+      "options":[
+        null,
+        "LATIN AMER. & CARIB",
+        "ASIA (EX. NEAR EAST)",
+        "EASTERN EUROPE", 
+        "WESTERN EUROPE",
+        "SUB-SAHARAN AFRICA",
+        "NORTHERN AFRICA",
+        "OCEANIA",
+        "C.W. OF IND. STATES",
+        "NEAR EAST",
+        "BALTICS"
+      ],
+      "name": "Region Selection: "
+    }
   }
+],"transform": [
+  {"filter": "datum.Population*datum.GDP_per_capita > GDP_Above"},
+  {
+    "filter": "Region_selection == null || datum.Region == Region_selection"
+}, {
+    "calculate": "datum.Population*datum.GDP_per_capita",
+    "as": "GDP"
+  }
+],
+  "layer": [{
+    "mark": {
+      "type": "text",
+      "fontSize": 10.5,
+      "dy":-75,
+      "dx":15
+    },
+    "encoding": {
+      "text": {"field": "Country", "type": "nominal"},
+      "color": {"value": "black"},
+      "opacity": {
+   "condition": {
+            "test": "datum['Country'] == 'China' ", "value": 1 },
+"value": 0 }
+  } },{
+    "mark": "circle",
+    "encoding": {
+      "y": {"field": "Population", 
+            "type": "quantitative",
+            "axis": {"tickCount": 5},
+            "scale": {"type": "log", "domain": [10000, 10000000000]}},
+      "x": {"field": "GDP_per_capita", 
+            "type": "quantitative", 
+            "axis": {"tickCount": 3},
+            "scale": {"type": "log", "domain": [100, 100000]}
+      },"color": {
+            "field": "Region",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+            "LATIN AMER. & CARIB",
+            "ASIA (EX. NEAR EAST)",
+            "EASTERN EUROPE", 
+            "WESTERN EUROPE",
+            "SUB-SAHARAN AFRICA",
+            "NORTHERN AFRICA",
+            "OCEANIA",
+            "C.W. OF IND. STATES",
+            "NEAR EAST",
+            "BALTICS"], 
+  "range": [
+            "#e41a1c",
+            "#984ea3",
+            "#ff7f00",
+            "#a6cee3",
+            "#377eb8",
+            "#a65628",
+            "#fec44f",
+            "#2c7fb8",
+            "#bcbddc",
+            "#c994c7"
+  ] }
+      }, "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "Agriculture", "title":"Agriculture rate", "type": "quantitative"},
+            {"field": "Industry", "title":"Industry rate","type": "quantitative"},
+            {"field": "Service","title":"Service rate","type": "quantitative"},
+            {"field": "GDP","title":"GDP","type": "quantitative","format":","} ]
+    }
+  }]
   
+}
