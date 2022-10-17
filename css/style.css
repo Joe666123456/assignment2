@@ -1,9 +1,4 @@
-#map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-}
+/* Selectors in HTML */
 body *{
     font-family: 'Open Sans', sans-serif;
 }
@@ -11,17 +6,17 @@ body *{
 h1 {
     font-weight: 900;
     text-align: center;
-    color: #fcfcfc;
+    color: #ffffff;
 }
 
 h2 {
     font-weight: 600;
-    color: #4A5D6B;
+    color: #f8f9fa;
 }
 
 h3 {
     font-weight: 300;
-    color: #4A5D6B;
+    color: #0a0d0f;
 }
 
 body {
