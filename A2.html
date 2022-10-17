@@ -73,9 +73,24 @@
     </div>
   </div>
 
+  <h2 style="text-align:center">Economy and composition</h2>
+  <div class="pure-g">
+    <div class="pure-u-1-2">
+      <div id="gdp"></div>
+    </div>
+    <div class="pure-u-2-5">
+      <div>
+        <p>The first column contains text and the second column contains a visualisation.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+      </div>
+    </div>
+  </div>
+
   
 
-  <h3 style="text-align:center">Economy proportion on typical countries</h3>
+  <h3 style="text-align:center">Introduction on typical countries</h3>
   <div class="pure-g">
     <div class="pure-u-1-4">
       <div id="eAmerica"></div>
@@ -155,6 +170,9 @@
   var spec7 = "nd.json";
   //"title": "Population per Country ",
 
+  var spec8 = "gdp.json";
+  //"title": "Population per Country ",
+
   vegaEmbed('#density_map', spec1, { "actions": false }).then(function(result) {
   }).catch(console.error);
   vegaEmbed('#birthdeath_map', spec2, { "actions": false }).then(function(result) {
@@ -168,6 +186,8 @@
   vegaEmbed('#eGermany', spec6, { "actions": false }).then(function(result) {
   }).catch(console.error);
   vegaEmbed('#nd', spec7, { "actions": false }).then(function(result) {
+  }).catch(console.error);
+  vegaEmbed('#gdp', spec8, { "actions": false }).then(function(result) {
   }).catch(console.error);
 
   

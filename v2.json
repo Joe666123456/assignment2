@@ -1,8 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 900,
-  "height": 450,
-  "background":"whitesmoke",
   "data": {
     "url": "https://raw.githubusercontent.com/Joe666123456/assignment2/main/data/countries_of_the_world.csv"
   },

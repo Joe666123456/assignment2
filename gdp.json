@@ -1,0 +1,69 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Drag the sliders to highlight points.",
+    "data": {"url": "https://raw.githubusercontent.com/Joe666123456/assignment2/main/data/countries_of_the_world.csv"},
+    "layer": [{
+      "mark": "circle",
+      "encoding": {
+        "x": {"field": "Population", 
+              "type": "quantitative",
+              "axis": {"tickCount": 3},
+              "scale": {"type": "log", "domain": [100, 10000000000]}},
+        "y": {"field": "GDP ($ per capita)", 
+              "type": "quantitative", 
+              "axis": {"tickCount": 3},
+              "scale": {"type": "log", "domain": [100, 100000]}
+        },"color": {
+              "field": "Region",
+              "type": "nominal",
+              "scale": {
+                "domain": [
+              "LATIN AMER. & CARIB",
+              "ASIA (EX. NEAR EAST)",
+              "EASTERN EUROPE", 
+              "WESTERN EUROPE",
+              "SUB-SAHARAN AFRICA",
+              "NORTHERN AFRICA",
+              "OCEANIA",
+              "C.W. OF IND. STATES",
+              "NEAR EAST",
+              "BALTICS"], 
+    "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00",
+              "#a6cee3",
+              "#377eb8",
+              "#a65628",
+              "#fec44f",
+              "#2c7fb8",
+              "#bcbddc",
+              "#c994c7"
+    ] }
+        }
+      }
+    },{
+    "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Country", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+                "test": "datum['Country'] == 'China'", "value": 1 },
+    "value": 0 },
+            "tooltip": [
+              {"field": "Country", "type": "nominal"},
+              {"field": "Agriculture", "title":"Agriculture rate", "type": "quantitative"},
+              {"field": "Industry", "title":"Industry rate","type": "quantitative"},
+              {"field": "Service","title":"Service rate","type": "quantitative"} ]
+    } }]
+    
+  }
+  
