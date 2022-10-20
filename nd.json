@@ -76,19 +76,6 @@
       "scale": {"type": "log", "domain": [0.1, 100000]}
 } },
 "layer": [ {
-"mark": {
-    "type": "text",
-    "fontSize": 11.5,
-    "dx":20
-  },
-  "encoding": {
-    "text": {"field": "Country", "type": "nominal"},
-    "color": {"value": "black"},
-    "opacity": {
-      "condition": {
-            "test": "datum['Country'] == 'China' || datum['Country'] == 'Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'Italy' || datum['Country'] == 'Yemen'", "value": 1 },
-"value": 0 }
-} },{
       "mark": "circle",
       "encoding": {
         "color": {
@@ -119,14 +106,26 @@
           "#c994c7"
 ] }
     },
-    "opacity": { "value": 0.6},
-        "tooltip": [
+    "opacity": { "value": 0.6}
+} 
+
+    },{
+"mark": {
+    "type": "text",
+    "fontSize": 11.5,
+    "dx":20
+  },
+  "encoding": {
+    "text": {"field": "Country", "type": "nominal"},
+    "color": {"value": "black"},
+    "opacity": {
+      "condition": {
+            "test": "datum['Country'] == 'China' || datum['Country'] == 'Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'Russia' || datum['Country'] == 'Yemen'|| datum['Country'] == 'Italy'", "value": 1 },
+"value": 0 }, "tooltip": [
           {"field": "Country", "type": "nominal"},
           {"field": "Birthrate", "title":"Birth rate", "type": "quantitative"},
           {"field": "Deathrate",  "title":"Death rate","type": "quantitative"},
           {"field": "Population","type": "quantitative", "format":","} ]
-} 
-
-    }
+} }
 
 ]  }
