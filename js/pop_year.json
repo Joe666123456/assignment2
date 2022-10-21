@@ -22,7 +22,8 @@
             {
               "field": "Country"
             },
-            {"field": "Population", "aggregate": "sum", "type": "quantitative", "title": "Population", "format": ","}
+            {"field": "Population", "aggregate": "sum", "type": "quantitative", "title": "Population", "format": ","},
+            {"field": "Growth_rate", "type": "quantitative", "title": "Growth rate", "format": ".2f"}
           ]
         }
   }
