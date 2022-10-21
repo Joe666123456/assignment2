@@ -1,0 +1,28 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/Joe666123456/assignment2/main/data/world-year-gdp-pop.csv"},
+        "mark": {
+          "type": "line",
+          "point": true
+        },
+        "title": "GDP of Countrys in Different Years",
+        "width": 325,
+        "height": 325,
+        "encoding": {
+        "x": {"field": "Year", "type": "nominal"},
+        "y": {"aggregate":"sum", "field": "Population", 
+        "title":"Population", "type": "quantitative"},
+        "color": {
+          "field": "Country", 
+          "type": "nominal"},
+        "tooltip": [
+            {
+              "field": "Year"
+            },
+            {
+              "field": "Country"
+            },
+            {"field": "Population", "aggregate": "sum", "type": "quantitative", "title": "Population", "format": ","}
+          ]
+        }
+  }
