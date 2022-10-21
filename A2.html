@@ -16,55 +16,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
   <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 </head>
 <body> 
 
 <div class="page">
-
   <!-- pure grid group -->
-  <div class="pure-g" style="background-image: url('img/rtwbanner1.jpg');">
+  <div class="pure-g" style="background-image: url('img/rtwbanne2.jpg');">
     <div class="pure-u-1-1">
-      <h1 style="text-align:center"><br><br><br>World demographic and economy report(2017)<br><br><br></h1>
+      <h1 style="text-align:center; color:#fdfbfb;"><br><br><br>World demographic and economy report<br><br><br></h1>
     </div>
   </div>
-  <!-- end pure grid group -->
 
-  <!-- pure grid group -->
+  <!-- pure grid group --><br>
   <h2 style="text-align:center">World demographic overview</h2>
   <div class="pure-g">
-    <div class="pure-u-2-3">
-      <div id="density_map" class="vis-container"></div>
-    </div>
-    <div class="pure-u-1-3">
-      <div>
+      <div class="pure-u-1-2">
         <p>The<b> top two</b> countries with largest population in the world: <b>China </b>and <b>India</b>, 
           with 37% of the world's population. <b>Africa</b> is the continent with<b> second</b> largest population 
           in the world, with about one billion people, which is nearly 15% of the population in the world.  
           There are 733 million people in the Europe, accounting for 11% of the world's population. 
+          </p>
+        </div>
+        <div class="pure-u-1-7"></div>
+        <div class="pure-u-1-2">
+          <p>
           Latin America has about 600 million people, accounting for 9% of the world's 
           population. North America, dominated by the United States and Canada, has 352 million people, 
           accounting for 5% of the world's population. Oceania has the<b> smallest</b> population, with only about 
           35 million people, accounting for 0.5% of the world's population. The main group is <b>Australia.</b></p>
       </div>
-    </div>
-    
-    
-    
-    
   </div>
-  <!-- end pure grid group -->
+
+  <div class="pure-u-1-1">
+    <div id="density_map" ></div>
+  </div>
   
+  <br>
 
-
-  <h2 style="text-align:center">Birth and death rate</h2>
+  <h2 style="text-align:center">Demographic attritude analysis</h2>
   <div class="pure-g">
-    <div class="pure-u-1-2">
+    <div class="pure-u-1-3">
       <div id="nd"></div>
     </div>
-    <div class="pure-u-1-2">
+    <div class="pure-u-7-24"></div>
+    <div class="pure-u-1-3">
       <div>
-        <p>With the improvement of economy in many <b>developing countries</b>, 
+        <p>
+          <br><br>With the improvement of economy in many <b>developing countries</b>, 
           these countries have <b>low natural growth rate</b> in population. 
           This is mainly reflected in low level of birth rate, 
           followed by relatively high level of the death rate compared to the previous years. 
@@ -74,48 +73,58 @@
       </div>
   </div>
 </div>
-  
-<h2 style="text-align:center">Economy and composition</h2>
+<br>
+<h2 style="text-align:center">Economy with its composition</h2>
 <div class="pure-g">
-  <div class="pure-u-1-2">
+  <div class="pure-u-1-3">
     <div id="gdp"></div>
   </div>
-
-  <div class="pure-u-1-2">
-    <div>
-      <p>In 2017, <b>China</b> was the <b>second economy component</b>, but its GDP per capita was not that high. 
-        Because of the population advantage, if the GDP per capita increases in the future, 
-        it will easily surpass the United States. 
-        UK GDP has<b> dropped</b> significantly since the UK officially left the EU in this year. </p>
-    </div>
-  </div>
+  <div class="pure-u-7-24"></div>
+  <div class="pure-u-1-3">
+    <p><br><br> In this chart, the area of the cuboid formed by the point to the x-axis and the y-axis 
+      represents the economic size of the country to a certain extent.
+      In 2017, <b>China</b> was the <b>second economy component</b>, but its GDP per capita was not that high. 
+      Because of the population advantage, if the GDP per capita increases in the future, 
+      it will easily surpass the United States. 
+      UK GDP has<b> dropped</b> significantly since the UK officially left the EU in this year. </p>
 </div>
-
-  <h3 style="text-align:center">Introduction on typical countries</h3>
+  
+  
+  
+</div>
+<br>
+  <h2 style="text-align:center">Introduction on typical countries</h3>
   <div class="pure-g">
-    <div class="pure-u-1-2">
+    <div class="pure-u-1-3">
       <div id="gdp_year"></div>
     </div>
-    <div class="pure-u-1-2">
+    <div class="pure-u-1-4"></div>
+    <div class="pure-u-1-3">
       <div id="pop_year"></div>
     </div>
   </div>
 
+
   <div class="pure-g">
     <div class="pure-u-1-4">
-      <div id="eAmerica"></div>
+      <br><br>
+      <div id="eGermany"></div>
     </div>
-    <div class="pure-u-1-4">
-      <h3 style="text-align:center">America</h3>
-      <p>As a long-term world "hegemon", 
-        the United States has always maintained its leading position 
-        in economic size. The service plays an significant role in the economy, 
-        of United Stateswhich is 79% in 2017.  </p>
+    <div class="pure-u-1-4"><br>
+      <h3 style="text-align:center">Germany</h3>
+      <p>German industry specialises in developing and producing complex products, 
+        especially capital goods and innovative production technologies. 
+        Compared with other national economies, 
+        Germany's industrial ratio is much larger. 
+        In total, 7.5 million people are employed in industry and processing.</p>
     </div>
+
+
     <div class="pure-u-1-4">
+      <br><br>
       <div id="eAustralia"></div>
     </div>
-    <div class="pure-u-1-4">
+    <div class="pure-u-1-4"><br>
       <h3 style="text-align:center">Australia</h3>
       <p>The argriculture take 24% in Australia economy, 
         which is relatively high proportion. Australia is one of the 
@@ -128,6 +137,19 @@
 
   <div class="pure-g">
     <div class="pure-u-1-4">
+      <br>
+      <div id="eAmerica"></div>
+    </div>
+    <div class="pure-u-1-4">
+      <h3 style="text-align:center">America</h3>
+      <p>As a long-term world "hegemon", 
+        the United States has always maintained its leading position 
+        in economic size. The service plays an significant role in the economy, 
+        of United Stateswhich is 79% in 2017.  </p>
+    </div>
+
+    <div class="pure-u-1-4">
+      <br>
       <div id="eChina"></div>
     </div>
     <div class="pure-u-1-4">
@@ -138,30 +160,17 @@
         its economic structure has gradually become more reasonable, 
         and it has developed in the direction of optimization and upgrading.</p>
     </div>
-    <div class="pure-u-1-4">
-      <div id="eGermany"></div>
-    </div>
-    <div class="pure-u-1-4">
-      <h3 style="text-align:center">Germany</h3>
-      <p>German industry specialises in developing and producing complex products, 
-        especially capital goods and innovative production technologies. 
-        Compared with other national economies, 
-        Germany's industrial ratio is much larger. 
-        In total, 7.5 million people are employed in industry and processing.</p>
-    </div>
+    
   </div>
   
-  <!-- end pure grid group -->
-
-  <div class="pure-g">
-    <div class="pure-u-1-1 small-font"  style="text-align:center">
-      <p>This visualisation is created by <b>Dongqiao He</b>.</p>
-      <p>The datasource is <a href="https://www.kaggle.com/datasets/fernandol/countries-of-the-world" target=" _blank">Countries of the World</href>.</p>
-    </div>
+  <div>
+    <p style="text-align:center">This visualisation is created by <b>Dongqiao He</b>.</p>
+    <p style="text-align:center">The datasource is <a href="https://www.kaggle.com/datasets/fernandol/countries-of-the-world" target=" _blank">Countries of the World</href></a>
+      and <a href="https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset" target=" _blank">World Population Dataset</href></a>
+    .</p>
   </div>
 
-
-</div> <!-- end page -->
+</div>
 
 
 

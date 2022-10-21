@@ -1,6 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Drag the sliders to highlight points.",
+  
+  "width": 270,
+  "height": 270,
   "data": {"url": "https://raw.githubusercontent.com/Joe666123456/assignment2/main/data/countries_of_the_world.csv"},
   "params": [{
     "name": "GDP_Above",

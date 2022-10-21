@@ -1,22 +1,20 @@
-/* Selectors in HTML */
 body *{
     font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
     font-weight: 900;
-    text-align: center;
-    color: #ffffff;
+    color: #070a0d;
 }
 
 h2 {
     font-weight: 600;
-    color: #f8f9fa;
+    color: #070a0d;
 }
 
 h3 {
     font-weight: 300;
-    color: #0a0d0f;
+    color: #070a0d;
 }
 
 body {
@@ -24,41 +22,18 @@ body {
 }
 
 p{
-    text-align:left;
+    text-align: left;
 }
 
 .page {
-    width: 850px;
-    background-color: lightslategray;
+    width: 1000px;
+    background-color: #ffffff;
     margin: auto;
     padding: 50px;
-    padding-top: 35px;
+    padding-top: 0px;
 }
+
 
 .vis-container {
     width: 100%;
-}
-
-.description h2,
-h1 {
-    margin-top: 0px;
-}
-
-.description-right {
-    padding-left: 20px;
-}
-
-.description-left {
-    padding-right: 20px;
-}
-
-.pure-g {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-}
-
-.small-font {
-    font-size: 14px;
 }

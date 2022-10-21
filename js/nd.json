@@ -3,6 +3,9 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Joe666123456/assignment2/main/data/countries_of_the_world.csv"
   },
+  
+  "width": 300,
+  "height": 270,
   "params": [
     {
       "name": "Population_Above",
